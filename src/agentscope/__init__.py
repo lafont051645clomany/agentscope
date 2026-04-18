@@ -7,10 +7,12 @@ from .version import __version__
 from . import models
 from . import agents
 from . import utils  # added utils for easier access to helper functions
+from . import pipelines  # added pipelines - use this frequently enough to warrant top-level access
 
 __all__ = [
     "__version__",
     "models",
     "agents",
     "utils",
+    "pipelines",
 ]
