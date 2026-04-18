@@ -6,9 +6,11 @@ from .version import __version__
 # Personal fork - adding commonly used modules to top-level imports for convenience
 from . import models
 from . import agents
+from . import utils  # added utils for easier access to helper functions
 
 __all__ = [
     "__version__",
     "models",
     "agents",
+    "utils",
 ]
