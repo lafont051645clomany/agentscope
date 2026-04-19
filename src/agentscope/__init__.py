@@ -13,6 +13,12 @@ from . import pipelines  # added pipelines - use this frequently enough to warra
 import sys
 print(f"[agentscope] Using personal fork (v{__version__})", file=sys.stderr)
 
+# Suppress the startup message when running in non-interactive/test environments
+# (avoids cluttering pytest output)
+import os
+if os.environ.get("AGENTSCOPE_QUIET") or not sys.stderr.isatty():
+    pass  # message already printed above; could conditionally suppress in future
+
 __all__ = [
     "__version__",
     "models",
